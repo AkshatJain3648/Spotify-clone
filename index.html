@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left rounded">
+            <div class="home rounded p-1">
+                <div class="logo"><img src="logo.svg" alt="logo" class="invert" style="margin:-10% 0 -10% 0;"></div>
+                <ul class="m-1">
+                    <li><img src="home.svg" alt="home" class="invert">Home</li>
+                    <li><img src="search.svg" alt="search" style="margin: 0 0 0 5px;" class="invert">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded p-1">
+                <div class="heading">
+                    <img src="library.svg" alt="" class="invert" width="40px" height="32px"
+                        style="margin-bottom: -8px;">
+
+                    <h2>Your Library</h2>
+
+                </div>
+
+                <div class="songs-list">
+                    <ul id="songsList" class="scroll-y">
+
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety &amp; Privacy Center</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                    <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right rounded">
+            <div class="header">
+                <nav class="nav">
+                    <div class="hamburger invert">
+                        <img src="images/hamburger.svg" alt="menu" id="hamburger">
+                        <img src="images/cross.svg" alt="close" style="display: none;" id="close">
+                    </div>
+                    <div class="buttons">
+                       <img src="images/profile.svg" alt="profile">
+                    </div>
+                </nav>
+
+                <div class="log-buttons">
+                    <button id="signUp">SignUp</button>
+                    <button id="login">Login</button>
+                </div>
+            </div>
+            <div class="spotify-music scroll-y">
+                <div class="spotify-artists">
+                    <h2>Popular artists</h1>
+                        <div class="showAll" id="viewMore">
+                            View more
+                        </div>
+                        <div class="card-container">
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="Artist"
+                                    width="155px" height="155px" class="circle">
+                                <h4>Pritam</h3>
+                                    <p class="color-grey">Artist</p>
+                            </div>
+                            <div class="card">
+                                <img src="	https://i.scdn.co/image/ab676161000051740261696c5df3be99da6ed3f3"
+                                    alt="Artist" width="155px" height="155px" class="circle">
+                                <h4>Arijit Singh</h3>
+                                    <p class="color-grey">Artist</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab676161000051749973157bdaedef3f77ef8e13" alt="Artist"
+                                    width="155px" height="155px" class="circle">
+                                <h4>Sidhu Moose wala</h3>
+                                    <p class="color-grey">Artist</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616100005174935b2dd507212bd72a71d7f9" alt="Artist"
+                                    width="155px" height="155px" class="circle">
+                                <h4>Pritam</h3>
+                                    <p class="color-grey">Artist</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="Artist"
+                                    width="155px" height="155px" class="circle">
+                                <h4>Pritam</h3>
+                                    <p class="color-grey">Artist</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab676161000051749973157bdaedef3f77ef8e13" alt="Artist"
+                                    width="155px" height="155px" class="circle">
+                                <h4>Sidhu Moose wala</h3>
+                                    <p class="color-grey">Artist</p>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div class="spotify-playlists">
+                    <h2>Popular albums</h1>
+                        <div class="card-container">
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="spotify-playlists">
+                    <h2>Popular playlists</h1>
+                        <div class="card-container">
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="Artist"
+                                    width="155px" height="155px" class="rounded">
+                                <h4>Animal</h4>
+                                <p class="color-grey">Manan Bhardwaj, Vishal Mishra, Jaani</p>
+
+                                <div class="play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="#1ed760" />
+
+                                        <g fill="#000" transform="translate(15, 15)">
+                                            <polygon points="5,0 15,10 5,20" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+
+            <div class="playbar-section glass">
+                <div class="song-controls">
+                    <div class="songName"></div>
+                    <div class="song-buttons">
+                        <img src="prevsong.svg" alt="prev song" id="prevSong" width="36px">
+                        <img src="play.svg" alt="play song" id="playSong" width="36px">
+                        <img src="nextsong.svg" alt="next song" id="nextSong" width="36px">
+                    </div>
+                    <div class="other-btns">
+                            <img src="images/heart.svg" alt="heart" id="heart" class="invert">
+                            <img src="images/heart-active.svg" alt="heart" id="heart-active">
+                    </div>
+                </div>
+
+                <div class="seekbar-section">
+                    <div class="currentTime">000</div>
+                    <div class="seekbar">
+                        <div class="seekbar-circle"></div> <!-- Circle of the seekbar -->
+                    </div>
+                    <div class="songTime"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
